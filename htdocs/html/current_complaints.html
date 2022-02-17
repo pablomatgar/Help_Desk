@@ -1,0 +1,48 @@
+<!--
+
+  The problems that are not finished already are saved in this html. The information can be modify by some users.
+  To this html only have access managers, help desk operators and the spacialists
+
+
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>ConnectU - Current Complaints</title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1671.6">
+  <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
+  <!-- Connetion with the css and js filds that load the staly and interations with the html. -->
+  <link rel="stylesheet" type="text/css" href="../css/css.css">
+  <link rel="stylesheet" type="text/css" href="../css/reset.css">
+  <script src="../js/js.js" type="text/javascript"></script>
+  <style type="text/css">
+  </style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+</head>
+<body>
+	  <header>
+	  <div class= "top_container">
+      <a href="../index.php"><img src="../resources/images/logoconnectedu1.png" alt="Business logo" class="business_logo"></a> <!-- The logo is also a button that will lead back to the index_xxx.html  -->
+        <section>
+			  <div class= "header-content">
+		  <ul>
+			  <div class="leftheader"><li><h1>CURRENT COMPLAINTS</h1></li></div>
+			  
+		       <div class="rightheader" onclick="logOut()"><li><h3>LOG OUT</h3></li></div>  
+        </ul>
+        
+        <!-- Here the users can search by ID a complaint they want to modify or ad information to it. -->
+        <form id="searchForm">
+          <input type="text" placeholder="Introduce a complaint ID number" id="search">
+          <input type="button" value="Search" onclick="searchComplaint()"></button>
+        </form>
+				  
+			  </div>  
+		  </section>
+	  </div>
+</body>
+</html>

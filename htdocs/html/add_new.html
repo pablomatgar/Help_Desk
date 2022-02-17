@@ -1,0 +1,157 @@
+<!--
+
+  This is the html for adding new complaints to the system. Only managers and help desk user have access to it.
+  Here we will find a form that will be completed by the help desk operators when they have a call.
+
+
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>ConnectU - Add New Complaints</title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1671.6">
+  <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
+  <!-- Connetion with the css and js filds that load the staly and interations with the html. -->
+  <link rel="stylesheet" type="text/css" href="../css/css.css">
+  <link rel="stylesheet" type="text/css" href="../css/reset.css">
+  <script src="../js/js.js" type="text/javascript"></script>
+  <style type="text/css">
+  </style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+</head>
+<body>
+  <header>
+	  <div class= "top_container">
+      <a href="../index.php"><img src="../resources/images/logoconnectedu1.png" alt="Business logo" class="business_logo"></a> <!-- The logo is also a button that will lead back to the index_xxx.html  -->
+    <section>
+      <ul>
+		<div class="add_new_complaints_title"><li><h1>ADD NEW COMPLAINT</h1></li></div>
+		<div class="signinbtn" onclick="logOut()"><li><h3>LOG OUT</h3></li></div>
+    </ul>
+		  </section>
+	  </div>
+  </header>
+  <br>
+	<div class="form_style">
+  <form method="post" action="../add_new.php">
+	  <div class = "fieldset_style">
+    <fieldset>
+    <!-- Information about the call is happening at the moment -->
+		<div class = "legend_style"><legend>CALL INFO</legend></div>
+	<p>
+         <label for="callid">Call ID:</label>
+         <input type="text" id="callid" name="callid">
+  </p>	
+  <p>	
+    <label for="startcall">Call date:</label>
+    <input type="date" id="calldate" name="calldate">
+  </p>	
+	<p>	
+      <label for="startcall">Start call time:</label>
+      <input type="time" step="1" id="startcall" name="startcall">
+	</p>	
+    </fieldset>
+	  </div>
+
+	 <div class = "fieldset_style">
+    <fieldset>
+    <!-- Thecnical information, that will help to stor the data and now who trate that problem. -->
+		<div class = "legend_style"><legend>TECHNICAL INFO</legend></div>
+		
+    <p>
+		<label for="employeeid">Employee ID:</label>
+        <input type="text" id="employeeid" name="employeeid">
+    </p>
+	<p>
+		<label for="operatorid">Operator ID:</label>
+        <input type="text" id="operatorid" name="operatorid">
+	</p>	
+     <p>
+	    <label for="hardware">Hardware:</label>
+        <input type="text" id="hardware" name="hardware">
+	</p>
+    </fieldset>
+	  </div>
+	  
+     <div class = "fieldset_style">
+    <fieldset>
+    <!-- General problem information, problem number, type and if a specialist is needed or not -->
+		<div class = "legend_style"><legend>PROBLEM INFO</legend></div>
+     <p>
+	    <label for="problemn">Problem Nº:</label>
+        <input type="text" id="problemn" name="problemn">
+	 </p>
+      <br>
+      <label for="Reason for call">Reason for the call or cause of the problem:</label>
+      <br>
+		<textarea class="textareas" name="notes" placeholder="NOTES:"></textarea>
+      <br>
+	<p>
+      <label for="problemtype">Problem Type:</label>
+      <input list="typesDataList" name="problemtype">
+      <datalist id="typesDataList">
+        <option value="Hardware Error">
+        <option value="Software Error">
+      </datalist>
+	</p>	
+	<p>	
+      <label for="specialist">Specialist:</label>
+      <input type="radio" id="specialistYes" name="specialist" value="yes" required="true">
+      <label for="specialistYes">YES</label>
+      <input type="radio" id="specialistNo" name="specialist" value="no">
+      <label for="specialistNo">NO</label>
+		
+	</p>
+	<p>
+        <label for="specialistSelection">Specialist Selection:</label>
+        <input list="specialistDataList" name="specialistSelection">
+        <datalist id="specialistDataList">
+          <option value="1112">
+          <option value="1113">
+          <option value="1114">
+          <option value="1115">
+          <option value="1116">
+          <option value="1117">
+        </datalist>   
+	</p>	
+		
+     </fieldset>
+	  </div>
+	  
+     <div class = "fieldset_style">
+    <fieldset>
+    <!-- Final phase, here the stuff will add information while they solve the problem and when is already solved. -->
+		<div class = "legend_style"><legend>FINAL PHASE</legend></div>
+      <p> 
+		  <label for="completiondate">End Time</label>
+          <input type="date" id="completiondate" name="completiondate">
+     </p>  
+       <br>
+	 <p>	
+      <label for="howSolved">Related comments:</label>
+      <br>
+		 
+      <textarea class="textareas" name="howsolved" placeholder="How was it solved?:"></textarea>
+	</p>
+		
+      <br>
+     <p>
+		 <label for="hourstaken">Hours Taken</label>
+         <input type="text" id="hourstaken" name="hourstaken">
+	</p> 
+    </fieldset>
+	  </div>
+     <p>
+        <input type="submit" value="Submit" name="submit">
+	  </p>	
+	  </div>
+  </form>
+	
+
+
+</body>
+</html>
